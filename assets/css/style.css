@@ -13,6 +13,7 @@ html,body{
   min-height: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
+  overflow-x:hidden;
 }
 
 
@@ -23,9 +24,7 @@ html,body{
   display: flex;  
   align-items: center;
 
-  
-  
-  
+
 }
 .main-header{
   width:100%;
@@ -160,4 +159,168 @@ html,body{
 
 .slidearea a:hover{
   filter: brightness(80%);
+}
+
+.banner .sliders-pointers{
+  width:100vw;
+  height:20px;
+
+  position:absolute;
+  margin-top:-50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .sliders-pointers .pointer.active{
+  background-color:var(--primary-color);
+}
+.banner .sliders-pointers .pointer{
+  width:10px;
+  height: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.default{
+  padding: 50px 0; 
+}
+
+.default .section-title,
+.default .section-desc{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+.default .section-title{
+    font-size:20px;
+    line-height:30px;
+    font-weight: 600;
+}
+
+.default .section-desc{
+  font-size:14px;
+  line-height:24px; 
+  margin: 10px 0 40px 0;
+  color:#555;
+}
+
+
+.default .section-body{
+  max-width: 1140px;
+  margin:auto;
+}
+
+.default.light{
+  background-color:#F7F7F7;
+}
+
+.default.light .section-title,
+.default.light .section-body{
+  color:#000;
+}
+
+
+.default.dark{
+  background-color:#000;
+}
+
+.default.dark .section-title,
+.default.dark .section-body{
+  color:#fff;
+}
+
+.btn{
+ max-width: 180px;
+ display: inline-block;
+ background:var(--primary-color);
+ color:#fff;
+ text-transform: uppercase;
+ font-size:12px;
+ line-height:22px;
+ font-weight: 600;
+ text-decoration:none;
+ padding: 10px 30px;
+ margin:10px;
+ border-radius: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+}
+
+
+
+
+
+/*  CSS De áreas especificas*/
+
+.section-about-us{
+  display:flex;
+}
+
+.section-aboutus--left{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.section-aboutus--left p{
+   padding:20px;
+   font-size:14px;
+   line-height:22px;
+   text-align: justify;
+}
+
+
+
+.section-aboutus--right{
+  width:520px;
+  text-align: center;
+  
+}
+
+.section-aboutus--right img{
+  width:480px;
+  margin-top:25px;
+  box-shadow:  0px 5px  10px gray;
+}
+
+
+.section-services{
+  display: flex;
+
+}
+
+.section-services .section-service:first-child{
+  border-left:1px solid rgba(255,255, 255, 0.2);
+}
+
+.section-services .section-service{
+  border-right: 1px solid rgba(255,255, 255, 0.2);
+  padding: 15px;
+  flex:1;
+  text-align:center;
+  
+}
+
+.section-services .section-service h4{
+  margin:10px auto;
+  text-transform: uppercase;
+  font-size:18px;
+  line-height:28px;
+  max-width: 180px; 
+}
+
+.section-services .section-service p{
+  font-size:13px;
+  line-height:23px;
+  color:#999;
 }
